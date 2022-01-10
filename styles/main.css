@@ -7,11 +7,17 @@ body {
   margin: 0;
 }
 
+header {
+  text-align: center;
+}
+
 .grid-container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  border: 2px solid black;
 }
 
 .grid {
@@ -20,14 +26,22 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   height: 100%;
-  height: 600px;
-  width: 600px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  height: 800px;
+  width: 700px;
+  border: 2px solid black;
 }
 
 .grid div {
+  border: 1px solid blue;
+  height: 5%;
+  width: 5%;
   flex-grow: 1;
-  border: 1px solid black;
-  height: 10%;
-  width: 10%;
 }
+
+.grid div.player {
+  background: url('../assets/falcon.png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
