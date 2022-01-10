@@ -7,8 +7,8 @@ function init() {
   const cells = []
 
   const playerClass = 'player'
-  const playerStartPosition = 0
-  let playerCurrentPosition = 0
+  const playerStartPosition = 389 
+  let playerCurrentPosition = playerStartPosition
 
   const obstacleClass = 'obstacle'
   const obstacleStartPosition = 0
@@ -40,27 +40,27 @@ function init() {
 
   // move player
   function playerMovement(event) {
-    // const key = event.KeyCode
-    // const left = 37
-    // const right = 39
-    // const up = 38
-    // const down = 40
-    // console.log('postion before redefining --->', playerCurrentPosition)
-    // removePlayer(playerCurrentPosition)
+    const key = event.keyCode
+    const left = 65
+    const right = 68
+    const up = 87
+    const down = 83
+    console.log('postion before redefining --->', playerCurrentPosition)
+    removePlayer(playerCurrentPosition)
 
-    // if (key === right && playerCurrentPosition % width !== width - 1) {
-    //   playerCurrentPosition++   //moving right = current postion plus 1
-    // } else if (key === left && playerCurrentPosition % width !== 0) {
-    //   playerCurrentPosition--
-    // } else if (key === up && playerCurrentPosition >= width) {
-    //   playerCurrentPosition -= width
-    // } else if (key === down && playerCurrentPosition <= cellCount - 1) {
-    //   playerCurrentPosition += width
-    // }
+    if (key === right && playerCurrentPosition % width !== width - 1) {
+      playerCurrentPosition++   //moving right = current postion plus 1
+    } else if (key === left && playerCurrentPosition % width !== 0) {
+      playerCurrentPosition--
+    } else if (key === up && playerCurrentPosition >= width) {
+      playerCurrentPosition -= width
+    } else if (key === down && playerCurrentPosition + width <= cellCount - 1) {
+      playerCurrentPosition += width
+    }
     
-    // console.log('positon after redefining --->', playerCurrentPosition)
+    console.log('positon after redefining --->', playerCurrentPosition)
 
-    // addPlayer(playerCurrentPosition)
+    addPlayer(playerCurrentPosition)
     
   }
 

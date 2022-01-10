@@ -39,7 +39,7 @@ header {
 }
 
 .grid div.player {
-  background: url('../assets/falcon.png') center;
+  background: url('../assets/falcon2.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
