@@ -11,8 +11,9 @@ function init() {
   let playerCurrentPosition = playerStartPosition
 
   const obstacleClass = 'obstacle'
-  const obstacleStartPosition = 359
+  const obstacleStartPosition = 339
   let obstacleCurrentPosition = obstacleStartPosition
+
 
   // making a grid
   function createGrid(playerStartPosition, obstacleStartPosition) {
@@ -69,13 +70,33 @@ function init() {
     }
 
     console.log('positon after redefining --->', playerCurrentPosition)
-
     addPlayer(playerCurrentPosition)
+    collision()
   }
 
-  function moveObstacle(event) {
+
+  // moving obstacle within set interval
+  const obstacleMovement = setInterval(() => {
+    console.log('This logs every second')
     removeObstacle(obstacleCurrentPosition)
-    
+
+    if (obstacleCurrentPosition % width === 0) {
+      obstacleCurrentPosition = + 339
+    } else {
+      obstacleCurrentPosition--
+    }
+    addObstacle(obstacleCurrentPosition)
+    collision()
+  
+  }, 500)
+
+  //  collision function call collision function within player move and every instance of obstacle move
+  function collision() {
+    if (playerCurrentPosition === obstacleCurrentPosition) {
+      removePlayer(playerCurrentPosition)
+      addPlayer(playerStartPosition)
+      playerCurrentPosition = playerStartPosition
+    }
   }
 
 
@@ -87,13 +108,7 @@ function init() {
 
 
 
-
-
-
-
-
-
-
+  //  event listeners
   document.addEventListener('keydown', playerMovement)
 
   createGrid(playerStartPosition, obstacleStartPosition)
