@@ -7,15 +7,15 @@ function init() {
   const cells = []
 
   const playerClass = 'player'
-  const playerStartPosition = 389 
+  const playerStartPosition = 389
   let playerCurrentPosition = playerStartPosition
 
   const obstacleClass = 'obstacle'
-  const obstacleStartPosition = 0
-  let obstacleCurrentPosition = 0
+  const obstacleStartPosition = 359
+  let obstacleCurrentPosition = obstacleStartPosition
 
   // making a grid
-  function createGrid(playerStartPosition) {
+  function createGrid(playerStartPosition, obstacleStartPosition) {
     for (let i = 0; i < cellCount; i++) {
       const cell = document.createElement('div')
       cell.innerText = i
@@ -23,11 +23,11 @@ function init() {
       cells.push(cell)
     }
     addPlayer(playerStartPosition)
+    addObstacle(obstacleStartPosition)
   }
 
   // adding player to grid
   function addPlayer(position) {
-
     console.log(cells[position])
     cells[position].classList.add(playerClass)
   }
@@ -35,7 +35,17 @@ function init() {
   // removing player from grid
   function removePlayer(position) {
     cells[position].classList.remove(playerClass)
+  }
 
+  // adding obstacles to grid
+  function addObstacle(position) {
+    console.log(cells[position])
+    cells[position].classList.add(obstacleClass)
+  }
+
+  // removing obstacle from grid
+  function removeObstacle(position) {
+    cells[position].classList.remove(obstacleClass)
   }
 
   // move player
@@ -57,10 +67,14 @@ function init() {
     } else if (key === down && playerCurrentPosition + width <= cellCount - 1) {
       playerCurrentPosition += width
     }
-    
+
     console.log('positon after redefining --->', playerCurrentPosition)
 
     addPlayer(playerCurrentPosition)
+  }
+
+  function moveObstacle(event) {
+    removeObstacle(obstacleCurrentPosition)
     
   }
 
@@ -80,11 +94,9 @@ function init() {
 
 
 
-
-
   document.addEventListener('keydown', playerMovement)
 
-  createGrid(playerStartPosition)
+  createGrid(playerStartPosition, obstacleStartPosition)
 }
 
 window.addEventListener('DOMContentLoaded', init)

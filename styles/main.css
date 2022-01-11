@@ -17,9 +17,14 @@ header img {
   height: 170px;
   margin: 0 auto;
   margin-left: 200px;
-  
-
 }
+
+/* #game-info {
+  background: url("../assets/infobanner.png") center;
+  background-size: 100px;
+} */
+
+
 
 
 
@@ -57,3 +62,9 @@ header img {
   cursor: pointer;
 }
 
+.grid div.obstacle {
+  background: url('../assets/pngegg.png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
