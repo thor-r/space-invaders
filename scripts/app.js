@@ -9,6 +9,7 @@ function init() {
   const playerClass = 'player'
   const playerStartPosition = 389
   let playerCurrentPosition = playerStartPosition
+
   // obstacle variables
   const obstacleClass = 'obstacle'
   const obstacleStartPosition = 339
@@ -18,10 +19,17 @@ function init() {
   const obstacle2StartPosition = 358
   let obstacle2CurrentPosition = obstacle2StartPosition
 
+  const obstacleCLass3 = 'obstacle3'
+  const obstacle3StartPosition = 302
+  let obstacle3CurrentPosition = obstacle3StartPosition
+
+  const obstacleClass4 = 'obstacle4'
+  const obstacle4StartPosition = 284
+  let obstacle4CurrentPosition = obstacle4StartPosition
 
 
   // making a grid --> add player and each obstacle as arguments
-  function createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition) {
+  function createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition) {
     for (let i = 0; i < cellCount; i++) {
       const cell = document.createElement('div')
       cell.innerText = i
@@ -31,6 +39,8 @@ function init() {
     addPlayer(playerStartPosition)
     addObstacle(obstacleStartPosition) //must add each instance of an obstacle
     addObstacle2(obstacle2StartPosition)
+    addObstacle3(obstacle3StartPosition)
+    addObstacle4(obstacle4StartPosition)
   }
 
   // adding player to grid
@@ -54,7 +64,13 @@ function init() {
     cells[position].classList.add(obstacleClass2)
   }
 
+  function addObstacle3(position) {
+    cells[position].classList.add(obstacleCLass3)
+  }
   
+  function addObstacle4(position) {
+    cells[position].classList.add(obstacleClass4)
+  }
 
 
 
@@ -66,6 +82,14 @@ function init() {
 
   function removeObstacle2(position) {
     cells[position].classList.remove(obstacleClass2)
+  }
+
+  function removeObstacle3(position) {
+    cells[position].classList.remove(obstacleCLass3)
+  }
+
+  function removeObstacle4(position) {
+    cells[position].classList.remove(obstacleClass4)
   }
 
 
@@ -150,9 +174,29 @@ function init() {
   }, 500)
   
 
+  const obstacle3Movement = setInterval(() => {
+    removeObstacle3(obstacle3CurrentPosition)
+    
+    if (obstacle3CurrentPosition % width === width - 1) {
+      obstacle3CurrentPosition = + 302
+    } else {
+      obstacle3CurrentPosition++
+    }
+    addObstacle3(obstacle3CurrentPosition)
+    collision()
+  }, 500)
 
-
-
+  const obstacle4Movement = setInterval(() => {
+    removeObstacle4(obstacle4CurrentPosition)
+    
+    if (obstacle4CurrentPosition % width === width - 1) {
+      obstacle4CurrentPosition = + 282
+    } else {
+      obstacle4CurrentPosition++
+    }
+    addObstacle4(obstacle4CurrentPosition)
+    collision()
+  }, 500)
 
 
 
@@ -188,7 +232,7 @@ function init() {
 
   //  collision function call collision function within player move and every instance of obstacle move / update collision for every new obstacle
   function collision() {
-    if (playerCurrentPosition === obstacleCurrentPosition || playerCurrentPosition === obstacle2CurrentPosition) {
+    if (playerCurrentPosition === obstacleCurrentPosition || playerCurrentPosition === obstacle2CurrentPosition || playerCurrentPosition === obstacle3CurrentPosition || playerCurrentPosition === obstacle4CurrentPosition) {
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
@@ -205,8 +249,9 @@ function init() {
 
   //  event listeners
   document.addEventListener('keydown', playerMovement)
+
   //must add each obstacle start position 
-  createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition)
+  createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition)
 }
 
 window.addEventListener('DOMContentLoaded', init)

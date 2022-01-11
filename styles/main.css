@@ -75,3 +75,17 @@ header img {
   background-size: contain;
   cursor: pointer;
 }
+
+.grid div.obstacle3 {
+  background: url('../assets/pngegg.png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle4 {
+  background: url('../assets/pngegg.png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
