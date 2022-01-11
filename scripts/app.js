@@ -1,18 +1,23 @@
 function init() {
-  // variables so far
+  // variables 
   const grid = document.querySelector('.grid')
 
   const width = 20
   const cellCount = width * width
   const cells = []
-
+  // player variables
   const playerClass = 'player'
   const playerStartPosition = 389
   let playerCurrentPosition = playerStartPosition
-
+  // obstacle variables
   const obstacleClass = 'obstacle'
   const obstacleStartPosition = 339
   let obstacleCurrentPosition = obstacleStartPosition
+
+  const obstacleClass2 = 'obstacle2'
+  const obstacle2StartPosition = 358
+  let obstacle2CurrentPosition = obstacle2StartPosition
+
 
 
   // making a grid
@@ -24,7 +29,8 @@ function init() {
       cells.push(cell)
     }
     addPlayer(playerStartPosition)
-    addObstacle(obstacleStartPosition)
+    addObstacle(obstacleStartPosition) //must add each instance of an obstacle
+    addObstacle2(obstacle2StartPosition)
   }
 
   // adding player to grid
@@ -44,10 +50,51 @@ function init() {
     cells[position].classList.add(obstacleClass)
   }
 
+  function addObstacle2(position) {
+    cells[position].classList.add(obstacleClass2)
+  }
+
+  
+
+
+
+
   // removing obstacle from grid
   function removeObstacle(position) {
     cells[position].classList.remove(obstacleClass)
   }
+
+  function removeObstacle2(position) {
+    cells[position.classList.remove(obstacleClass2)]
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // move player
   function playerMovement(event) {
@@ -90,20 +137,57 @@ function init() {
   
   }, 500)
 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   //  collision function call collision function within player move and every instance of obstacle move
   function collision() {
     if (playerCurrentPosition === obstacleCurrentPosition) {
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      // window.alert('game over')
     }
   }
 
 
 
-
-
-
+  // win function --> call function within player movement??
 
 
 
