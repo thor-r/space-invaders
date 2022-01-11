@@ -225,7 +225,7 @@ function init() {
 
 
 
-
+  // win function --> call function within player movement??
   function winLogic() {
     if (playerCurrentPosition === goalPosition) {
       removePlayer(playerCurrentPosition)
@@ -248,7 +248,7 @@ function init() {
 
 
 
-  // win function --> call function within player movement??
+  
 
 
 

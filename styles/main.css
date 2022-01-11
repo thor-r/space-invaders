@@ -6,7 +6,7 @@ body {
   height: 100vh;
   margin: 0;
   display: flex; 
-  
+  background-color: red;
 }
 
 /* changing body to flex changed arrangment  */
@@ -19,14 +19,10 @@ header img {
   margin-left: 200px;
 }
 
-/* #game-info {
-  background: url("../assets/infobanner.png") center;
-  background-size: 100px;
-} */
-
-
-
-
+#start {
+  margin-left: 20px;
+  margin-right: 20px;;
+}
 
 .grid-container {
   height: 100vh;
@@ -35,6 +31,7 @@ header img {
   align-items: center;
   margin: 0 auto;
   border: 2px solid black;
+  background-color: green;
 }
 
 .grid {
@@ -46,6 +43,7 @@ header img {
   height: 800px;
   width: 700px;
   border: 2px solid black;
+  background-color: white;
 }
 
 .grid div {
