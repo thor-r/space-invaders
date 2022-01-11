@@ -20,8 +20,8 @@ function init() {
 
 
 
-  // making a grid
-  function createGrid(playerStartPosition, obstacleStartPosition) {
+  // making a grid --> add player and each obstacle as arguments
+  function createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition) {
     for (let i = 0; i < cellCount; i++) {
       const cell = document.createElement('div')
       cell.innerText = i
@@ -65,7 +65,7 @@ function init() {
   }
 
   function removeObstacle2(position) {
-    cells[position.classList.remove(obstacleClass2)]
+    cells[position].classList.remove(obstacleClass2)
   }
 
 
@@ -122,7 +122,7 @@ function init() {
   }
 
 
-  // moving obstacle within set interval
+  // moving obstacles within set interval
   const obstacleMovement = setInterval(() => {
     console.log('This logs every second')
     removeObstacle(obstacleCurrentPosition)
@@ -137,6 +137,17 @@ function init() {
   
   }, 500)
 
+  const obstacle2Movement = setInterval(() => {
+    removeObstacle2(obstacle2CurrentPosition)
+    
+    if (obstacle2CurrentPosition % width === 0) {
+      obstacle2CurrentPosition = + 359 //added back -1 cell to prevent gaps forming
+    } else {
+      obstacle2CurrentPosition--
+    }
+    addObstacle2(obstacle2CurrentPosition)
+    collision()
+  }, 500)
   
 
 
@@ -175,9 +186,9 @@ function init() {
 
 
 
-  //  collision function call collision function within player move and every instance of obstacle move
+  //  collision function call collision function within player move and every instance of obstacle move / update collision for every new obstacle
   function collision() {
-    if (playerCurrentPosition === obstacleCurrentPosition) {
+    if (playerCurrentPosition === obstacleCurrentPosition || playerCurrentPosition === obstacle2CurrentPosition) {
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
@@ -194,8 +205,8 @@ function init() {
 
   //  event listeners
   document.addEventListener('keydown', playerMovement)
-
-  createGrid(playerStartPosition, obstacleStartPosition)
+  //must add each obstacle start position 
+  createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition)
 }
 
 window.addEventListener('DOMContentLoaded', init)
