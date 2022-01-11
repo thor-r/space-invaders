@@ -27,20 +27,30 @@ function init() {
   const obstacle4StartPosition = 284
   let obstacle4CurrentPosition = obstacle4StartPosition
 
+  const goalClass = 'goal'
+  const goalPosition = 3
+  const goalCurrentPosition = goalPosition
+
 
   // making a grid --> add player and each obstacle as arguments
-  function createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition) {
+  function createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition, goalPosition) {
     for (let i = 0; i < cellCount; i++) {
       const cell = document.createElement('div')
       cell.innerText = i
       grid.appendChild(cell)
       cells.push(cell)
-    }
+    } 
     addPlayer(playerStartPosition)
     addObstacle(obstacleStartPosition) //must add each instance of an obstacle
     addObstacle2(obstacle2StartPosition)
     addObstacle3(obstacle3StartPosition)
     addObstacle4(obstacle4StartPosition)
+    addGoal(goalPosition)
+  }
+
+  // addding goal to grid
+  function addGoal(position) {
+    cells[position].classList.add(goalClass)
   }
 
   // adding player to grid
@@ -143,6 +153,7 @@ function init() {
     console.log('positon after redefining --->', playerCurrentPosition)
     addPlayer(playerCurrentPosition)
     collision()
+    winLogic()
   }
 
 
@@ -215,19 +226,14 @@ function init() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  function winLogic() {
+    if (playerCurrentPosition === goalPosition) {
+      removePlayer(playerCurrentPosition)
+      window.alert('you won')
+      addPlayer(playerStartPosition)
+      playerCurrentPosition = playerStartPosition
+    }
+  }
 
 
   //  collision function call collision function within player move and every instance of obstacle move / update collision for every new obstacle
@@ -251,7 +257,7 @@ function init() {
   document.addEventListener('keydown', playerMovement)
 
   //must add each obstacle start position 
-  createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition)
+  createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition, goalPosition)
 }
 
 window.addEventListener('DOMContentLoaded', init)

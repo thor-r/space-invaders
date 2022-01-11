@@ -89,3 +89,10 @@ header img {
   background-size: contain;
   cursor: pointer;
 }
+
+.grid div.goal {
+  background-color: red;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
