@@ -1,6 +1,7 @@
 function init() {
   // variables 
   const grid = document.querySelector('.grid')
+  const audio = document.querySelector('#audio')
 
   const width = 20
   const cellCount = width * width
@@ -29,7 +30,7 @@ function init() {
 
   const goalClass = 'goal'
   const goalPosition = 3
-  const goalCurrentPosition = goalPosition
+  // const goalCurrentPosition = goalPosition
 
 
   // making a grid --> add player and each obstacle as arguments
@@ -141,13 +142,17 @@ function init() {
     removePlayer(playerCurrentPosition)
 
     if (key === right && playerCurrentPosition % width !== width - 1) {
-      playerCurrentPosition++   //moving right = current postion plus 1
+      playerCurrentPosition++ 
+      playerSound()
     } else if (key === left && playerCurrentPosition % width !== 0) {
       playerCurrentPosition--
+      playerSound()
     } else if (key === up && playerCurrentPosition >= width) {
       playerCurrentPosition -= width
+      playerSoundForward()
     } else if (key === down && playerCurrentPosition + width <= cellCount - 1) {
       playerCurrentPosition += width
+      playerSoundBack()
     }
 
     console.log('positon after redefining --->', playerCurrentPosition)
@@ -248,10 +253,21 @@ function init() {
 
 
 
+  //player movement sounds 
+  function playerSound() {
+    audio.src = 'sounds/mil2.wav'
+    audio.play()
+  }
   
-
-
-
+  function playerSoundBack() {
+    audio.src = 'sounds/back.wav'
+    audio.play()
+  }
+  
+  function playerSoundForward() {
+    audio.src = 'sounds/forward2.wav'
+    audio.play()
+  }
 
   //  event listeners
   document.addEventListener('keydown', playerMovement)
@@ -259,5 +275,6 @@ function init() {
   //must add each obstacle start position 
   createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition, goalPosition)
 }
+
 
 window.addEventListener('DOMContentLoaded', init)
