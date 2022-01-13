@@ -17,6 +17,7 @@ header img {
   height: 170px;
   margin: 0 auto;
   margin-left: 200px;
+  border-radius: 10px;
 }
 
 #start {
@@ -47,6 +48,7 @@ header img {
   margin-left: 50px;  /*this centers the grid on page */
   padding-left: 30px;
   padding-right: 30px;
+  border-radius: 5px;
 }
 
 .grid {
@@ -58,7 +60,8 @@ header img {
   height: 800px;
   width: 700px;
   border: 2px solid black;
-  background-color: white;
+  background-color: black;
+  border-radius: 5px;
 }
 
 .grid div {

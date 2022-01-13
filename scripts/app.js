@@ -341,6 +341,8 @@ function init() {
     collision()
   }, 500)
 
+  
+
 
 
 
