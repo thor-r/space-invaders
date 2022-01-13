@@ -21,7 +21,18 @@ header img {
 
 #start {
   margin-left: 20px;
-  margin-right: 20px;;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+#controls {
+  background: url('../assets/controlinfo.png');
+  background-size: cover;
+  width: 800px;
+  height: 50px;
+  border-radius: 10px;
+  padding-top: -5px;
+  
 }
 
 .grid-container {
@@ -32,6 +43,10 @@ header img {
   margin: 0 auto;
   border: 2px solid black;
   background-color: green;
+  flex-direction: column; /*big change to appearance */
+  margin-left: 50px;  /*this centers the grid on page */
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .grid {
@@ -47,12 +62,12 @@ header img {
 }
 
 .grid div {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   height: 5%;
   width: 5%;
   flex-grow: 1;
 }
-
+/* player */
 .grid div.player {
   background: url('../assets/falcon2.png') center;
   background-repeat: no-repeat;
@@ -60,6 +75,7 @@ header img {
   cursor: pointer;
 }
 
+/* obstacles */
 .grid div.obstacle {
   background: url('../assets/pngegg.png') center;
   background-repeat: no-repeat;
@@ -88,9 +104,125 @@ header img {
   cursor: pointer;
 }
 
-.grid div.goal {
-  background-color: red;
+
+/* death star */
+.grid div.star1 {
+  background: url('../deathstar/image_part_001 (1).png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.grid div.star2 {
+  background: url('../deathstar/image_part_002 (1).png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.grid div.star3 {
+  background: url('../deathstar/image_part_003 (1).png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.grid div.star4 {
+  background: url('../deathstar/image_part_004 (1).png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  margin-right: -5px;
+  margin-top: -5px;
+}
+
+.grid div.star5 {
+  background: url('../deathstar/image_part_005 (1).png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.grid div.star6 {
+  background: url('../deathstar/image_part_006 (1).png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.grid div.star7 {
+  background: url('../deathstar/image_part_007 (1).png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.grid div.star8 {
+  background: url('../deathstar/image_part_008 (1).png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  margin-top: -5px;
+  margin-bottom: 1px;
+  
+}
+
+.grid div.star9 {
+  background: url('../deathstar/image_part_009 (1).png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.grid div.star10 {
+  background: url('../deathstar/image_part_010.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.grid div.star11 {
+  background: url('../deathstar/image_part_011.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.grid div.star12 {
+  background: url('../deathstar/image_part_012.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  margin-right: -3px;
+  
+}
+
+.grid div.star13 {
+  background: url('../deathstar/image_part_013.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.grid div.star14 {
+  background: url('../deathstar/image_part_014.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+.grid div.star15 {
+  background: url('../deathstar/image_part_015.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+.grid div.star16 {
+  background: url('../deathstar/image_part_016.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   cursor: pointer;
 }

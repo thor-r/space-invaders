@@ -6,6 +6,7 @@ function init() {
   const width = 20
   const cellCount = width * width
   const cells = []
+
   // player variables
   const playerClass = 'player'
   const playerStartPosition = 389
@@ -28,31 +29,157 @@ function init() {
   const obstacle4StartPosition = 284
   let obstacle4CurrentPosition = obstacle4StartPosition
 
-  const goalClass = 'goal'
-  const goalPosition = 3
-  // const goalCurrentPosition = goalPosition
+  // death star variables 
+  const starClass1 = 'star1'
+  const starPosition1 = 0
+
+  const starClass2 = 'star2'
+  const starPosition2 = 1
+
+  const starClass3 = 'star3'
+  const starPosition3 = 2
+
+  const starClass4 = 'star4'
+  const starPosition4 = 3
+
+  const starClass5 = 'star5'
+  const starPosition5 = 20
+
+  const starClass6 = 'star6'
+  const starPosition6 = 21
+
+  const starClass7 = 'star7'
+  const starPosition7 = 22
+ 
+  const starClass8 = 'star8'
+  const starPosition8 = 23
+
+  const starClass9 = 'star9'
+  const starPosition9 = 40
+
+  const starClass10 = 'star10'
+  const starPosition10 = 41
+
+  const starClass11 = 'star11'
+  const starPosition11 = 42
+
+  const starClass12 = 'star12'
+  const starPosition12 = 43
+
+  const starClass13 = 'star13'
+  const starPosition13 = 60
+
+  const starClass14 = 'star14'
+  const starPosition14 = 61
+
+  const starClass15 = 'star15'
+  const starPosition15 = 62
+
+  const starClass16 = 'star16'
+  const starPosition16 = 63
+
+  
 
 
   // making a grid --> add player and each obstacle as arguments
-  function createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition, goalPosition) {
+  function createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition, starPosition1, starPosition2, starPosition3, starPosition4, starPosition5, starPosition6, starPosition7, starPosition8, starPosition9, starPosition10, starPosition11, starPosition12, starPosition13, starPosition14, starPosition15, starPosition16) {
     for (let i = 0; i < cellCount; i++) {
       const cell = document.createElement('div')
       cell.innerText = i
       grid.appendChild(cell)
       cells.push(cell)
+      
     } 
     addPlayer(playerStartPosition)
     addObstacle(obstacleStartPosition) //must add each instance of an obstacle
     addObstacle2(obstacle2StartPosition)
     addObstacle3(obstacle3StartPosition)
     addObstacle4(obstacle4StartPosition)
-    addGoal(goalPosition)
+    // calling each instance of addStar
+    addStar1(starPosition1)
+    addStar2(starPosition2)
+    addStar3(starPosition3)
+    addStar4(starPosition4)
+    addStar5(starPosition5)
+    addStar6(starPosition6)
+    addStar7(starPosition7)
+    addStar8(starPosition8)
+    addStar9(starPosition9)
+    addStar10(starPosition10)
+    addStar11(starPosition11)
+    addStar12(starPosition12)
+    addStar13(starPosition13)
+    addStar14(starPosition14)
+    addStar15(starPosition15)
+    addStar16(starPosition16)
+
   }
 
-  // addding goal to grid
-  function addGoal(position) {
-    cells[position].classList.add(goalClass)
+  // addding death star to grid
+  function addStar1(position) {
+    cells[position].classList.add(starClass1)
   }
+
+  function addStar2(position) {
+    cells[position].classList.add(starClass2)
+  }
+
+  function addStar3(position) {
+    cells[position].classList.add(starClass3)
+  }
+
+  function addStar4(position) {
+    cells[position].classList.add(starClass4)
+  }
+
+  function addStar5(position) {
+    cells[position].classList.add(starClass5)
+  }
+
+  function addStar6(position) {
+    cells[position].classList.add(starClass6)
+  }
+
+  function addStar7(position) {
+    cells[position].classList.add(starClass7)
+  }
+
+  function addStar8(position) {
+    cells[position].classList.add(starClass8)
+  }
+
+  function addStar9(position) {
+    cells[position].classList.add(starClass9)
+  }
+
+  function addStar10(position) {
+    cells[position].classList.add(starClass10)
+  }
+
+  function addStar11(position) {
+    cells[position].classList.add(starClass11)
+  }
+
+  function addStar12(position) {
+    cells[position].classList.add(starClass12)
+  }
+
+  function addStar13(position) {
+    cells[position].classList.add(starClass13)
+  }
+
+  function addStar14(position) {
+    cells[position].classList.add(starClass14)
+  }
+
+  function addStar15(position) {
+    cells[position].classList.add(starClass15)
+  }
+
+  function addStar16(position) {
+    cells[position].classList.add(starClass16)
+  }
+
 
   // adding player to grid
   function addPlayer(position) {
@@ -194,7 +321,7 @@ function init() {
     removeObstacle3(obstacle3CurrentPosition)
     
     if (obstacle3CurrentPosition % width === width - 1) {
-      obstacle3CurrentPosition = + 302
+      obstacle3CurrentPosition = + 300
     } else {
       obstacle3CurrentPosition++
     }
@@ -206,7 +333,7 @@ function init() {
     removeObstacle4(obstacle4CurrentPosition)
     
     if (obstacle4CurrentPosition % width === width - 1) {
-      obstacle4CurrentPosition = + 282
+      obstacle4CurrentPosition = + 281
     } else {
       obstacle4CurrentPosition++
     }
@@ -232,7 +359,7 @@ function init() {
 
   // win function --> call function within player movement??
   function winLogic() {
-    if (playerCurrentPosition === goalPosition) {
+    if (playerCurrentPosition === starPosition1) {
       removePlayer(playerCurrentPosition)
       window.alert('you won')
       addPlayer(playerStartPosition)
@@ -242,14 +369,44 @@ function init() {
 
 
   //  collision function call collision function within player move and every instance of obstacle move / update collision for every new obstacle
+  // function collision() {
+  //   if (playerCurrentPosition === obstacleCurrentPosition || playerCurrentPosition === obstacle2CurrentPosition || playerCurrentPosition === obstacle3CurrentPosition || playerCurrentPosition === obstacle4CurrentPosition) {
+  //     removePlayer(playerCurrentPosition)
+  //     addPlayer(playerStartPosition)
+  //     playerCurrentPosition = playerStartPosition
+  //     // window.alert('game over')
+  //   }
+  // }
+
   function collision() {
-    if (playerCurrentPosition === obstacleCurrentPosition || playerCurrentPosition === obstacle2CurrentPosition || playerCurrentPosition === obstacle3CurrentPosition || playerCurrentPosition === obstacle4CurrentPosition) {
+    if (playerCurrentPosition === obstacleCurrentPosition) {
+      collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-      // window.alert('game over')
+
+    } else if (playerCurrentPosition === obstacle2CurrentPosition) {
+      collisionSoundChewy()
+      removePlayer(playerCurrentPosition)
+      addPlayer(playerStartPosition)
+      playerCurrentPosition = playerStartPosition
+      
+    } else if (playerCurrentPosition === obstacle3CurrentPosition) {
+      collisionSoundChewy()
+      removePlayer(playerCurrentPosition)
+      addPlayer(playerStartPosition)
+      playerCurrentPosition = playerStartPosition
+      
+    } else if (playerCurrentPosition === obstacle4CurrentPosition) {
+      collisionSoundChewy()
+      removePlayer(playerCurrentPosition)
+      addPlayer(playerStartPosition)
+      playerCurrentPosition = playerStartPosition
+      
     }
   }
+
+
 
 
 
@@ -269,11 +426,23 @@ function init() {
     audio.play()
   }
 
+  // collision sounds
+  function collisionSoundChewy() {
+    audio.src = 'sounds/chewyR2D2.wav'
+    audio.play()
+  }
+
+
+
+
+
+
+
   //  event listeners
   document.addEventListener('keydown', playerMovement)
 
   //must add each obstacle start position 
-  createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition, goalPosition)
+  createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition, starPosition1, starPosition2, starPosition3, starPosition4, starPosition5, starPosition6, starPosition7, starPosition8, starPosition9, starPosition10, starPosition11, starPosition12, starPosition13, starPosition14, starPosition15, starPosition16)
 }
 
 
