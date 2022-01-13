@@ -50,7 +50,7 @@ function init() {
 
   const starClass7 = 'star7'
   const starPosition7 = 22
- 
+
   const starClass8 = 'star8'
   const starPosition8 = 23
 
@@ -78,7 +78,19 @@ function init() {
   const starClass16 = 'star16'
   const starPosition16 = 63
 
-  
+  // trying to make laser work 
+  const laserClass = 'laser'
+  let laserPosition = obstacle3CurrentPosition
+  let laserCurrentPosition = laserPosition
+  let laserNewPosition
+
+  function addLaser(position) {
+    cells[position].classList.add(laserClass)
+  }
+
+  function removeLaser(position) {
+    cells[position].classList.remove(laserClass)
+  }
 
 
   // making a grid --> add player and each obstacle as arguments
@@ -88,10 +100,11 @@ function init() {
       cell.innerText = i
       grid.appendChild(cell)
       cells.push(cell)
-      
-    } 
+
+    }
+    //must add each instance of an obstacle
     addPlayer(playerStartPosition)
-    addObstacle(obstacleStartPosition) //must add each instance of an obstacle
+    addObstacle(obstacleStartPosition)
     addObstacle2(obstacle2StartPosition)
     addObstacle3(obstacle3StartPosition)
     addObstacle4(obstacle4StartPosition)
@@ -112,7 +125,6 @@ function init() {
     addStar14(starPosition14)
     addStar15(starPosition15)
     addStar16(starPosition16)
-
   }
 
   // addding death star to grid
@@ -205,7 +217,7 @@ function init() {
   function addObstacle3(position) {
     cells[position].classList.add(obstacleCLass3)
   }
-  
+
   function addObstacle4(position) {
     cells[position].classList.add(obstacleClass4)
   }
@@ -269,7 +281,7 @@ function init() {
     removePlayer(playerCurrentPosition)
 
     if (key === right && playerCurrentPosition % width !== width - 1) {
-      playerCurrentPosition++ 
+      playerCurrentPosition++
       playerSound()
     } else if (key === left && playerCurrentPosition % width !== 0) {
       playerCurrentPosition--
@@ -295,33 +307,33 @@ function init() {
     removeObstacle(obstacleCurrentPosition)
 
     if (obstacleCurrentPosition % width === 0) {
-      obstacleCurrentPosition = + 339
+      obstacleCurrentPosition += 19
     } else {
       obstacleCurrentPosition--
     }
     addObstacle(obstacleCurrentPosition)
     collision()
-  
+
   }, 500)
 
   const obstacle2Movement = setInterval(() => {
     removeObstacle2(obstacle2CurrentPosition)
-    
+
     if (obstacle2CurrentPosition % width === 0) {
-      obstacle2CurrentPosition = + 359 //added back -1 cell to prevent gaps forming
+      obstacle2CurrentPosition += 19 //added back -1 cell to prevent gaps forming
     } else {
       obstacle2CurrentPosition--
     }
     addObstacle2(obstacle2CurrentPosition)
     collision()
   }, 500)
-  
+
 
   const obstacle3Movement = setInterval(() => {
     removeObstacle3(obstacle3CurrentPosition)
-    
+
     if (obstacle3CurrentPosition % width === width - 1) {
-      obstacle3CurrentPosition = + 300
+      obstacle3CurrentPosition -= 19
     } else {
       obstacle3CurrentPosition++
     }
@@ -331,9 +343,9 @@ function init() {
 
   const obstacle4Movement = setInterval(() => {
     removeObstacle4(obstacle4CurrentPosition)
-    
+
     if (obstacle4CurrentPosition % width === width - 1) {
-      obstacle4CurrentPosition = + 281
+      obstacle4CurrentPosition -= 19
     } else {
       obstacle4CurrentPosition++
     }
@@ -341,13 +353,55 @@ function init() {
     collision()
   }, 500)
 
-  
+
+  // laser shooting functions
+  // let count = 0
+
+
+  // const obstacleShoot = setInterval(() => {
+  //   // removeLaser(laserPosition)
+  //   // laserPosition = laserCurrentPosition -= 20
+  //   // addLaser(laserCurrentPosition)
+  //   shootLaser()
+  // }, 500)
+
+
+  // function shootLaser() {
+  //   count++
+  //   if (count > 10) {
+  //     clearInterval()
+  //     removeLaser(laserCurrentPosition)
+    
+  //   } else {
+  //     shootAgain()
+  //   }
+  // }
+
+  // // if (laserCurrentPosition <= width) {
+  // //   removeLaser(laserCurrentPosition)
+
+  // function shootAgain() {
+  //   removeLaser(laserPosition)
+  //   laserPosition = laserCurrentPosition -= 20
+  //   addLaser(laserCurrentPosition)
+
+  // }
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+  // ^laser shooting trail and error^
 
 
 
@@ -361,25 +415,17 @@ function init() {
 
   // win function --> call function within player movement??
   function winLogic() {
-    if (playerCurrentPosition === starPosition1) {
+    if (playerCurrentPosition === starPosition1 || playerCurrentPosition === starPosition4 || playerCurrentPosition === starPosition8 || playerCurrentPosition === starPosition12 || playerCurrentPosition === starPosition13 || playerCurrentPosition === starPosition14 || playerCurrentPosition === starPosition15 || playerCurrentPosition === starPosition16) {
       removePlayer(playerCurrentPosition)
-      window.alert('you won')
+      // window.alert('you won')
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      YodaLaugh()
     }
   }
 
 
   //  collision function call collision function within player move and every instance of obstacle move / update collision for every new obstacle
-  // function collision() {
-  //   if (playerCurrentPosition === obstacleCurrentPosition || playerCurrentPosition === obstacle2CurrentPosition || playerCurrentPosition === obstacle3CurrentPosition || playerCurrentPosition === obstacle4CurrentPosition) {
-  //     removePlayer(playerCurrentPosition)
-  //     addPlayer(playerStartPosition)
-  //     playerCurrentPosition = playerStartPosition
-  //     // window.alert('game over')
-  //   }
-  // }
-
   function collision() {
     if (playerCurrentPosition === obstacleCurrentPosition) {
       collisionSoundChewy()
@@ -392,19 +438,19 @@ function init() {
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-      
+
     } else if (playerCurrentPosition === obstacle3CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-      
+
     } else if (playerCurrentPosition === obstacle4CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-      
+
     }
   }
 
@@ -417,12 +463,12 @@ function init() {
     audio.src = 'sounds/mil2.wav'
     audio.play()
   }
-  
+
   function playerSoundBack() {
     audio.src = 'sounds/back.wav'
     audio.play()
   }
-  
+
   function playerSoundForward() {
     audio.src = 'sounds/forward2.wav'
     audio.play()
@@ -434,7 +480,11 @@ function init() {
     audio.play()
   }
 
-
+  // win sounds 
+  function YodaLaugh() {
+    audio.src = 'sounds/YODA3.wav'
+    audio.play()
+  }
 
 
 
