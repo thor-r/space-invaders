@@ -59,6 +59,19 @@ border: 3px solid gold;
   
 }
 
+#score {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: azure;
+}
+
+span {
+font-size: medium;
+font-weight: bold;
+color: azure;
+}
+
 .grid-container {
   height: 100vh;
   display: flex;
@@ -83,7 +96,7 @@ border: 3px solid gold;
   height: 800px;
   width: 700px;
   border: 2px solid black;
-  background-color: white;
+  background-color: black;
   /* background: url('../assets/darkersapce.gif'); */
   border-radius: 5px;
 }
@@ -105,32 +118,277 @@ border: 3px solid gold;
 
 /* obstacles */
 .grid div.obstacle {
-  background: url('../assets/pngegg.png') center;
+  background: url('../assets/pngegg (1).png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle2 {
-  background: url('../assets/pngegg.png') center;
+  background: url('../assets/pngegg (1).png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle3 {
-  background: url('../assets/pngegg.png') center;
+  background: url('../assets/pngegg (1).png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle4 {
-  background: url('../assets/pngegg.png') center;
+  background: url('../assets/pngegg (1).png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
+
+.grid div.obstacle5 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle6 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle7 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle8 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle9 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle10 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle11 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle12 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle13 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle14 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle15 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle16 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle17 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle18 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle19 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle20 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle21 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle22 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle23 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle24 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle25 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle26 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle27 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle28 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle29 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle30 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle31 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle32 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle33 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle34 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle35 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.obstacle36 {
+  background: url('../assets/pngegg (1).png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* death star */
