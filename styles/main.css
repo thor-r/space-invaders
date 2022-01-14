@@ -6,7 +6,8 @@ body {
   height: 100vh;
   margin: 0;
   display: flex; 
-  background-color: red;
+  /* background-color: red; */
+  background: url('../assets/Movies-Star-Wars-Pictures.jpeg');
 }
 
 /* changing body to flex changed arrangment  */
@@ -18,22 +19,26 @@ header img {
   margin: 0 auto;
   margin-left: 250px;
   border-radius: 10px;
-  /* opacity: 0.8; */
+  opacity: 0.8;
+  border: 3px solid gold;
 }
 
 header {
   width: 300px;
   height: 170px; /*made header same size as header image */
+
 }
 
 section {
-  width: 500px;
-  height: 580px;
+  width: 500px; 
+  height: 400px;
   background: url('../assets/storygif.gif') center;
   background-repeat: no-repeat;
   margin-top: 200px;
   margin-left: -140px;
   opacity: 0.9;
+  border: 3px solid gold;
+  border-radius: 10px;
 }
 
 #start {
@@ -99,18 +104,18 @@ color: azure;
   background-color: black;
   /* background: url('../assets/darkersapce.gif'); */
   border-radius: 5px;
+  
 }
 
 .grid div {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   height: 5%;
   width: 5%;
   flex-grow: 1;
-  
 }
 /* player */
 .grid div.player {
-  background: url('../assets/playerimage.png') center;
+  background: url('../assets/millennium-falcon-amoled-wallpaper.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
@@ -118,252 +123,252 @@ color: azure;
 
 /* obstacles */
 .grid div.obstacle {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle2 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle3 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle4 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle5 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle6 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle7 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle8 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle9 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle10 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle11 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle12 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle13 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle14 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle15 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle16 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle17 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle18 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle19 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle20 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle21 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle22 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle23 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle24 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle25 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle26 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle27 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle28 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle29 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle30 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle31 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle32 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle33 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle34 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle35 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroids4.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.obstacle36 {
-  background: url('../assets/pngegg (1).png') center;
+  background: url('../assets/asteroid3.png') center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
