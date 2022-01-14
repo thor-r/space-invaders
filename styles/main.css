@@ -16,8 +16,24 @@ header img {
   width: 300px;
   height: 170px;
   margin: 0 auto;
-  margin-left: 200px;
+  margin-left: 250px;
   border-radius: 10px;
+  /* opacity: 0.8; */
+}
+
+header {
+  width: 300px;
+  height: 170px; /*made header same size as header image */
+}
+
+section {
+  width: 500px;
+  height: 580px;
+  background: url('../assets/storygif.gif') center;
+  background-repeat: no-repeat;
+  margin-top: 200px;
+  margin-left: -140px;
+  opacity: 0.9;
 }
 
 #start {
@@ -49,10 +65,10 @@ border: 3px solid gold;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  border: 2px solid black;
+  border: 3px solid white;
   background-color: green;
-  flex-direction: column; /*big change to appearance */
-  margin-left: 50px;  /*this centers the grid on page */
+  flex-direction: column;  
+  /* margin-left: 50px;  this centers the grid on page */
   padding-left: 30px;
   padding-right: 30px;
   border-radius: 5px;
