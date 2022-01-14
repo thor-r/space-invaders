@@ -501,7 +501,7 @@ function init() {
   }
 
   function addObstacle34(position) {
-    cells[position].classList.add(obstacleClass35)
+    cells[position].classList.add(obstacleClass34)
   }
 
   function addObstacle35(position) {
@@ -779,30 +779,355 @@ function init() {
     collision()
   }, 500)
 
+  const obstacle8Movement = setInterval(() => {
+    removeObstacle8(obstacle8CurrentPosition)
 
+    if (obstacle8CurrentPosition % width === width - 1) {
+      obstacle8CurrentPosition -= 19
+    } else {
+      obstacle8CurrentPosition++
+    }
+    addObstacle8(obstacle8CurrentPosition)
+    collision()
+  }, 500)
 
+  const obstacle9Movement = setInterval(() => {
+    removeObstacle9(obstacle9CurrentPosition)
 
+    if (obstacle9CurrentPosition % width === width - 1) {
+      obstacle9CurrentPosition -= 19
+    } else {
+      obstacle9CurrentPosition++
+    }
+    addObstacle9(obstacle9CurrentPosition)
+    collision()
+  }, 500)
 
+  const obstacle10Movement = setInterval(() => {
+    removeObstacle10(obstacle10CurrentPosition)
 
+    if (obstacle10CurrentPosition % width === width - 1) {
+      obstacle10CurrentPosition -= 19
+    } else {
+      obstacle10CurrentPosition++
+    }
+    addObstacle10(obstacle10CurrentPosition)
+    collision()
+  }, 500)
 
+  const obstacle11Movement = setInterval(() => {
+    removeObstacle11(obstacle11CurrentPosition)
 
+    if (obstacle11CurrentPosition % width === width - 1) {
+      obstacle11CurrentPosition -= 19
+    } else {
+      obstacle11CurrentPosition++
+    }
+    addObstacle11(obstacle11CurrentPosition)
+    collision()
+  }, 500)
 
+  const obstacle12Movement = setInterval(() => {
+    removeObstacle12(obstacle12CurrentPosition)
 
+    if (obstacle12CurrentPosition % width === width - 1) {
+      obstacle12CurrentPosition -= 19
+    } else {
+      obstacle12CurrentPosition++
+    }
+    addObstacle12(obstacle12CurrentPosition)
+    collision()
+  }, 500)
 
+  const obstacle13Movement = setInterval(() => {
+    removeObstacle13(obstacle13CurrentPosition)
 
+    if (obstacle13CurrentPosition % width === 0) {
+      obstacle13CurrentPosition += 19
+    } else {
+      obstacle13CurrentPosition--
+    }
+    addObstacle13(obstacle13CurrentPosition)
+    collision()
+  }, 500)
 
+  const obstacle14Movement = setInterval(() => {
+    removeObstacle14(obstacle14CurrentPosition)
 
+    if (obstacle14CurrentPosition % width === 0) {
+      obstacle14CurrentPosition += 19
+    } else {
+      obstacle14CurrentPosition--
+    }
+    addObstacle14(obstacle14CurrentPosition)
+    collision()
+  }, 500)
 
+  const obstacle15Movement = setInterval(() => {
+    removeObstacle15(obstacle15CurrentPosition)
 
+    if (obstacle15CurrentPosition % width === 0) {
+      obstacle15CurrentPosition += 19
+    } else {
+      obstacle15CurrentPosition--
+    }
+    addObstacle15(obstacle15CurrentPosition)
+    collision()
+  }, 500)
 
+  const obstacle16Movement = setInterval(() => {
+    removeObstacle16(obstacle16CurrentPosition)
 
+    if (obstacle16CurrentPosition % width === 0) {
+      obstacle16CurrentPosition += 19
+    } else {
+      obstacle16CurrentPosition--
+    }
+    addObstacle16(obstacle16CurrentPosition)
+    collision()
+  }, 500)
 
+  const obstacle17Movement = setInterval(() => {
+    removeObstacle17(obstacle17CurrentPosition)
 
+    if (obstacle17CurrentPosition % width === 0) {
+      obstacle17CurrentPosition += 19
+    } else {
+      obstacle17CurrentPosition--
+    }
+    addObstacle17(obstacle17CurrentPosition)
+    collision()
+  }, 500)
 
+  const obstacle18Movement = setInterval(() => {
+    removeObstacle18(obstacle18CurrentPosition)
 
+    if (obstacle18CurrentPosition % width === 0) {
+      obstacle18CurrentPosition += 19
+    } else {
+      obstacle18CurrentPosition--
+    }
+    addObstacle18(obstacle18CurrentPosition)
+    collision()
+  }, 500)
 
+  const obstacle19Movement = setInterval(() => {
+    removeObstacle19(obstacle19CurrentPosition)
 
+    if (obstacle19CurrentPosition % width === width - 1) {
+      obstacle19CurrentPosition -= 19
+    } else {
+      obstacle19CurrentPosition++
+    }
+    addObstacle19(obstacle19CurrentPosition)
+    collision()
+  }, 500)
 
+  const obstacle20Movement = setInterval(() => {
+    removeObstacle20(obstacle20CurrentPosition)
+
+    if (obstacle20CurrentPosition % width === width - 1) {
+      obstacle20CurrentPosition -= 19
+    } else {
+      obstacle20CurrentPosition++
+    }
+    addObstacle20(obstacle20CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle21Movement = setInterval(() => {
+    removeObstacle21(obstacle21CurrentPosition)
+
+    if (obstacle21CurrentPosition % width === width - 1) {
+      obstacle21CurrentPosition -= 19
+    } else {
+      obstacle21CurrentPosition++
+    }
+    addObstacle21(obstacle21CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle22Movement = setInterval(() => {
+    removeObstacle22(obstacle22CurrentPosition)
+
+    if (obstacle22CurrentPosition % width === width - 1) {
+      obstacle22CurrentPosition -= 19
+    } else {
+      obstacle22CurrentPosition++
+    }
+    addObstacle22(obstacle22CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle23Movement = setInterval(() => {
+    removeObstacle23(obstacle23CurrentPosition)
+
+    if (obstacle23CurrentPosition % width === width - 1) {
+      obstacle23CurrentPosition -= 19
+    } else {
+      obstacle23CurrentPosition++
+    }
+    addObstacle23(obstacle23CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle24Movement = setInterval(() => {
+    removeObstacle24(obstacle24CurrentPosition)
+
+    if (obstacle24CurrentPosition % width === width - 1) {
+      obstacle24CurrentPosition -= 19
+    } else {
+      obstacle24CurrentPosition++
+    }
+    addObstacle24(obstacle24CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle25Movement = setInterval(() => {
+    removeObstacle25(obstacle25CurrentPosition)
+
+    if (obstacle25CurrentPosition % width === 0) {
+      obstacle25CurrentPosition += 19
+    } else {
+      obstacle25CurrentPosition--
+    }
+    addObstacle25(obstacle25CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle26Movement = setInterval(() => {
+    removeObstacle26(obstacle26CurrentPosition)
+
+    if (obstacle26CurrentPosition % width === 0) {
+      obstacle26CurrentPosition += 19
+    } else {
+      obstacle26CurrentPosition--
+    }
+    addObstacle26(obstacle26CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle27Movement = setInterval(() => {
+    removeObstacle27(obstacle27CurrentPosition)
+
+    if (obstacle27CurrentPosition % width === 0) {
+      obstacle27CurrentPosition += 19
+    } else {
+      obstacle27CurrentPosition--
+    }
+    addObstacle27(obstacle27CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle28Movement = setInterval(() => {
+    removeObstacle28(obstacle28CurrentPosition)
+
+    if (obstacle28CurrentPosition % width === 0) {
+      obstacle28CurrentPosition += 19
+    } else {
+      obstacle28CurrentPosition--
+    }
+    addObstacle28(obstacle28CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle29Movement = setInterval(() => {
+    removeObstacle29(obstacle29CurrentPosition)
+
+    if (obstacle29CurrentPosition % width === 0) {
+      obstacle29CurrentPosition += 19
+    } else {
+      obstacle29CurrentPosition--
+    }
+    addObstacle29(obstacle29CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle30Movement = setInterval(() => {
+    removeObstacle30(obstacle30CurrentPosition)
+
+    if (obstacle30CurrentPosition % width === 0) {
+      obstacle30CurrentPosition += 19
+    } else {
+      obstacle30CurrentPosition--
+    }
+    addObstacle30(obstacle30CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle31Movement = setInterval(() => {
+    removeObstacle31(obstacle31CurrentPosition)
+
+    if (obstacle31CurrentPosition % width === width - 1) {
+      obstacle31CurrentPosition -= 19
+    } else {
+      obstacle31CurrentPosition++
+    }
+    addObstacle31(obstacle31CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle32Movement = setInterval(() => {
+    removeObstacle32(obstacle32CurrentPosition)
+
+    if (obstacle32CurrentPosition % width === width - 1) {
+      obstacle32CurrentPosition -= 19
+    } else {
+      obstacle32CurrentPosition++
+    }
+    addObstacle32(obstacle32CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle33Movement = setInterval(() => {
+    removeObstacle33(obstacle33CurrentPosition)
+
+    if (obstacle33CurrentPosition % width === width - 1) {
+      obstacle33CurrentPosition -= 19
+    } else {
+      obstacle33CurrentPosition++
+    }
+    addObstacle33(obstacle33CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle34Movement = setInterval(() => {
+    removeObstacle34(obstacle34CurrentPosition)
+
+    if (obstacle34CurrentPosition % width === width - 1) {
+      obstacle34CurrentPosition -= 19
+    } else {
+      obstacle34CurrentPosition++
+    }
+    addObstacle34(obstacle34CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle35Movement = setInterval(() => {
+    removeObstacle35(obstacle35CurrentPosition)
+
+    if (obstacle35CurrentPosition % width === width - 1) {
+      obstacle35CurrentPosition -= 19
+    } else {
+      obstacle35CurrentPosition++
+    }
+    addObstacle35(obstacle35CurrentPosition)
+    collision()
+  }, 500)
+
+  const obstacle36Movement = setInterval(() => {
+    removeObstacle36(obstacle36CurrentPosition)
+
+    if (obstacle36CurrentPosition % width === width - 1) {
+      obstacle36CurrentPosition -= 19
+    } else {
+      obstacle36CurrentPosition++
+    }
+    addObstacle36(obstacle36CurrentPosition)
+    collision()
+  }, 500)
+
+  
 
   // laser shooting functions
   // let count = 0
