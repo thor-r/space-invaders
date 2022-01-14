@@ -2,6 +2,8 @@ function init() {
   // variables 
   const grid = document.querySelector('.grid')
   const audio = document.querySelector('#audio')
+  const lives = document.querySelector('#lives')
+  const score = document.querySelector('#score')
 
   const width = 20
   const cellCount = width * width
@@ -245,7 +247,7 @@ function init() {
   function createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition, starPosition1, starPosition2, starPosition3, starPosition4, starPosition5, starPosition6, starPosition7, starPosition8, starPosition9, starPosition10, starPosition11, starPosition12, starPosition13, starPosition14, starPosition15, starPosition16, obstacle5StartPosition, obstacle6StartPosition, obstacle7StartPosition, obstacle8StartPosition, obstacle9StartPosition, obstacle10StartPosition, obstacle11StartPosition, obstacle12StartPosition, obstacle13StartPosition, obstacle14StartPosition, obstacle15StartPosition, obstacle16StartPosition, obstacle17StartPosition, obstacle18StartPosition, obstacle19StartPosition, obstacle20StartPosition, obstacle21StartPosition, obstacle22StartPosition, obstacle23StartPosition, obstacle24StartPosition, obstacle25StartPosition, obstacle26StartPosition, obstacle27StartPosition, obstacle28StartPosition, obstacle29StartPosition, obstacle30StartPosition, obstacle31StartPosition, obstacle32StartPosition, obstacle33StartPosition, obstacle34StartPosition, obstacle35StartPosition, obstacle36StartPosition, enemy1StartPosition, enemy2StartPosition, enemy3StartPosition, enemy4StartPosition) {
     for (let i = 0; i < cellCount; i++) {
       const cell = document.createElement('div')
-      cell.innerText = i
+      // cell.innerText = i
       grid.appendChild(cell)
       cells.push(cell)
 
@@ -762,7 +764,7 @@ function init() {
     addObstacle(obstacleCurrentPosition)
     collision()
 
-  }, 500)
+  }, 450)
 
   const obstacle2Movement = setInterval(() => {
     removeObstacle2(obstacle2CurrentPosition)
@@ -774,7 +776,7 @@ function init() {
     }
     addObstacle2(obstacle2CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
 
   const obstacle3Movement = setInterval(() => {
@@ -787,7 +789,7 @@ function init() {
     }
     addObstacle3(obstacle3CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle4Movement = setInterval(() => {
     removeObstacle4(obstacle4CurrentPosition)
@@ -799,7 +801,7 @@ function init() {
     }
     addObstacle4(obstacle4CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle5Movement = setInterval(() => {
     removeObstacle5(obstacle5CurrentPosition)
@@ -811,7 +813,7 @@ function init() {
     }
     addObstacle5(obstacle5CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   // moving right
   const obstacle6Movement = setInterval(() => {
@@ -824,7 +826,7 @@ function init() {
     }
     addObstacle6(obstacle6CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   // moving  left
   const obstacle7Movement = setInterval(() => {
@@ -837,7 +839,7 @@ function init() {
     }
     addObstacle7(obstacle7CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle8Movement = setInterval(() => {
     removeObstacle8(obstacle8CurrentPosition)
@@ -849,7 +851,7 @@ function init() {
     }
     addObstacle8(obstacle8CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle9Movement = setInterval(() => {
     removeObstacle9(obstacle9CurrentPosition)
@@ -861,7 +863,7 @@ function init() {
     }
     addObstacle9(obstacle9CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle10Movement = setInterval(() => {
     removeObstacle10(obstacle10CurrentPosition)
@@ -873,7 +875,7 @@ function init() {
     }
     addObstacle10(obstacle10CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle11Movement = setInterval(() => {
     removeObstacle11(obstacle11CurrentPosition)
@@ -885,7 +887,7 @@ function init() {
     }
     addObstacle11(obstacle11CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle12Movement = setInterval(() => {
     removeObstacle12(obstacle12CurrentPosition)
@@ -897,7 +899,7 @@ function init() {
     }
     addObstacle12(obstacle12CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle13Movement = setInterval(() => {
     removeObstacle13(obstacle13CurrentPosition)
@@ -909,7 +911,7 @@ function init() {
     }
     addObstacle13(obstacle13CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle14Movement = setInterval(() => {
     removeObstacle14(obstacle14CurrentPosition)
@@ -921,7 +923,7 @@ function init() {
     }
     addObstacle14(obstacle14CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle15Movement = setInterval(() => {
     removeObstacle15(obstacle15CurrentPosition)
@@ -933,7 +935,7 @@ function init() {
     }
     addObstacle15(obstacle15CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle16Movement = setInterval(() => {
     removeObstacle16(obstacle16CurrentPosition)
@@ -945,7 +947,7 @@ function init() {
     }
     addObstacle16(obstacle16CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle17Movement = setInterval(() => {
     removeObstacle17(obstacle17CurrentPosition)
@@ -957,7 +959,7 @@ function init() {
     }
     addObstacle17(obstacle17CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle18Movement = setInterval(() => {
     removeObstacle18(obstacle18CurrentPosition)
@@ -969,7 +971,7 @@ function init() {
     }
     addObstacle18(obstacle18CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle19Movement = setInterval(() => {
     removeObstacle19(obstacle19CurrentPosition)
@@ -981,7 +983,7 @@ function init() {
     }
     addObstacle19(obstacle19CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle20Movement = setInterval(() => {
     removeObstacle20(obstacle20CurrentPosition)
@@ -993,7 +995,7 @@ function init() {
     }
     addObstacle20(obstacle20CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle21Movement = setInterval(() => {
     removeObstacle21(obstacle21CurrentPosition)
@@ -1005,7 +1007,7 @@ function init() {
     }
     addObstacle21(obstacle21CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle22Movement = setInterval(() => {
     removeObstacle22(obstacle22CurrentPosition)
@@ -1017,7 +1019,7 @@ function init() {
     }
     addObstacle22(obstacle22CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle23Movement = setInterval(() => {
     removeObstacle23(obstacle23CurrentPosition)
@@ -1029,7 +1031,7 @@ function init() {
     }
     addObstacle23(obstacle23CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle24Movement = setInterval(() => {
     removeObstacle24(obstacle24CurrentPosition)
@@ -1041,7 +1043,7 @@ function init() {
     }
     addObstacle24(obstacle24CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle25Movement = setInterval(() => {
     removeObstacle25(obstacle25CurrentPosition)
@@ -1053,7 +1055,7 @@ function init() {
     }
     addObstacle25(obstacle25CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle26Movement = setInterval(() => {
     removeObstacle26(obstacle26CurrentPosition)
@@ -1065,7 +1067,7 @@ function init() {
     }
     addObstacle26(obstacle26CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle27Movement = setInterval(() => {
     removeObstacle27(obstacle27CurrentPosition)
@@ -1077,7 +1079,7 @@ function init() {
     }
     addObstacle27(obstacle27CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle28Movement = setInterval(() => {
     removeObstacle28(obstacle28CurrentPosition)
@@ -1089,7 +1091,7 @@ function init() {
     }
     addObstacle28(obstacle28CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle29Movement = setInterval(() => {
     removeObstacle29(obstacle29CurrentPosition)
@@ -1101,7 +1103,7 @@ function init() {
     }
     addObstacle29(obstacle29CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle30Movement = setInterval(() => {
     removeObstacle30(obstacle30CurrentPosition)
@@ -1113,7 +1115,7 @@ function init() {
     }
     addObstacle30(obstacle30CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle31Movement = setInterval(() => {
     removeObstacle31(obstacle31CurrentPosition)
@@ -1125,7 +1127,7 @@ function init() {
     }
     addObstacle31(obstacle31CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle32Movement = setInterval(() => {
     removeObstacle32(obstacle32CurrentPosition)
@@ -1137,7 +1139,7 @@ function init() {
     }
     addObstacle32(obstacle32CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle33Movement = setInterval(() => {
     removeObstacle33(obstacle33CurrentPosition)
@@ -1149,7 +1151,7 @@ function init() {
     }
     addObstacle33(obstacle33CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle34Movement = setInterval(() => {
     removeObstacle34(obstacle34CurrentPosition)
@@ -1161,7 +1163,7 @@ function init() {
     }
     addObstacle34(obstacle34CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle35Movement = setInterval(() => {
     removeObstacle35(obstacle35CurrentPosition)
@@ -1173,7 +1175,7 @@ function init() {
     }
     addObstacle35(obstacle35CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   const obstacle36Movement = setInterval(() => {
     removeObstacle36(obstacle36CurrentPosition)
@@ -1185,7 +1187,7 @@ function init() {
     }
     addObstacle36(obstacle36CurrentPosition)
     collision()
-  }, 500)
+  }, 450)
 
   // enemy movement functions
   const enemy1Movement = setInterval(() => {
@@ -1257,7 +1259,7 @@ function init() {
   //   // laserPosition = laserCurrentPosition -= 20
   //   // addLaser(laserCurrentPosition)
   //   shootLaser()
-  // }, 500)
+  // }, 450)
 
 
   // function shootLaser() {
@@ -1318,6 +1320,22 @@ function init() {
     }
   }
 
+  function youLost() {
+    removePlayer(playerCurrentPosition)
+    // window.alert('you lost')
+    addPlayer(playerStartPosition)
+    playerCurrentPosition = playerStartPosition
+    lives.innerHTML = 3
+    score.innerHTML = 0
+    jabbaLaugh()
+  }
+
+  // let pointGained = 10
+  // const newPoint = 10
+
+  let points = + 10
+  const lifeLost = -1
+
 
   //  collision function call collision function within player move and every instance of obstacle move / update collision for every new obstacle
   function collision() {
@@ -1326,37 +1344,54 @@ function init() {
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      // score.innerHTML = points
+      // points = score.innerHTML + points
+      // lives.innerHTML = lifeLost
 
     } else if (playerCurrentPosition === obstacle2CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      // score.innerHTML = points
+      // points = score.innerHTML + points
+      // lives.innerHTML = lifeLost
 
     } else if (playerCurrentPosition === obstacle3CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      // score.innerHTML = points
+      // points = score.innerHTML + points
+      // lives.innerHTML = lifeLost
 
     } else if (playerCurrentPosition === obstacle4CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
-      playerCurrentPosition = playerStartPosition
+      // score.innerHTML = points
+      // points = score.innerHTML + points
+      // lives.innerHTML = lifeLost
 
     } else if (playerCurrentPosition === obstacle5CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      // score.innerHTML = points
+      // points = score.innerHTML + points
+      // lives.innerHTML = lifeLost
 
     } else if (playerCurrentPosition === obstacle6CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-
+      // score.innerHTML = points
+      // points = score.innerHTML + points
+      // lives.innerHTML = lifeLost
+      
     } else if (playerCurrentPosition === obstacle7CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
@@ -1560,6 +1595,9 @@ function init() {
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+    
+    } if (lives.innerHTML === 0) {
+      youLost()
     }
   }
 
