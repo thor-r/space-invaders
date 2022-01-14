@@ -157,6 +157,25 @@ function init() {
   const obstacle36StartPosition = 156
   let obstacle36CurrentPosition = obstacle36StartPosition
 
+  // enemy variables
+  const enemyClass1 = 'enemyShip1'
+  const enemy1StartPosition = 109
+  let enemy1CurrentPosition = enemy1StartPosition
+
+  const enemyClass2 = 'enemyShip2'
+  const enemy2StartPosition = 87
+  let enemy2CurrentPosition = enemy2StartPosition
+
+  const enemyClass3 = 'enemyShip3'
+  const enemy3StartPosition = 89
+  let enemy3CurrentPosition = enemy3StartPosition
+
+  const enemyClass4 = 'enemyShip4'
+  const enemy4StartPosition = 91
+  let enemy4CurrentPosition = enemy4StartPosition
+
+
+
 
   // death star variables 
   const starClass1 = 'star1'
@@ -223,7 +242,7 @@ function init() {
 
 
   // making a grid --> add player and each obstacle as arguments
-  function createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition, starPosition1, starPosition2, starPosition3, starPosition4, starPosition5, starPosition6, starPosition7, starPosition8, starPosition9, starPosition10, starPosition11, starPosition12, starPosition13, starPosition14, starPosition15, starPosition16, obstacle5StartPosition, obstacle6StartPosition, obstacle7StartPosition, obstacle8StartPosition, obstacle9StartPosition, obstacle10StartPosition, obstacle11StartPosition, obstacle12StartPosition, obstacle13StartPosition, obstacle14StartPosition, obstacle15StartPosition, obstacle16StartPosition, obstacle17StartPosition, obstacle18StartPosition, obstacle19StartPosition, obstacle20StartPosition, obstacle21StartPosition, obstacle22StartPosition, obstacle23StartPosition, obstacle24StartPosition, obstacle25StartPosition, obstacle26StartPosition, obstacle27StartPosition, obstacle28StartPosition, obstacle29StartPosition, obstacle30StartPosition, obstacle31StartPosition, obstacle32StartPosition, obstacle33StartPosition, obstacle34StartPosition, obstacle35StartPosition, obstacle36StartPosition) {
+  function createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition, starPosition1, starPosition2, starPosition3, starPosition4, starPosition5, starPosition6, starPosition7, starPosition8, starPosition9, starPosition10, starPosition11, starPosition12, starPosition13, starPosition14, starPosition15, starPosition16, obstacle5StartPosition, obstacle6StartPosition, obstacle7StartPosition, obstacle8StartPosition, obstacle9StartPosition, obstacle10StartPosition, obstacle11StartPosition, obstacle12StartPosition, obstacle13StartPosition, obstacle14StartPosition, obstacle15StartPosition, obstacle16StartPosition, obstacle17StartPosition, obstacle18StartPosition, obstacle19StartPosition, obstacle20StartPosition, obstacle21StartPosition, obstacle22StartPosition, obstacle23StartPosition, obstacle24StartPosition, obstacle25StartPosition, obstacle26StartPosition, obstacle27StartPosition, obstacle28StartPosition, obstacle29StartPosition, obstacle30StartPosition, obstacle31StartPosition, obstacle32StartPosition, obstacle33StartPosition, obstacle34StartPosition, obstacle35StartPosition, obstacle36StartPosition, enemy1StartPosition, enemy2StartPosition, enemy3StartPosition, enemy4StartPosition) {
     for (let i = 0; i < cellCount; i++) {
       const cell = document.createElement('div')
       cell.innerText = i
@@ -269,6 +288,12 @@ function init() {
     addObstacle34(obstacle34StartPosition)
     addObstacle35(obstacle35StartPosition)
     addObstacle36(obstacle36StartPosition)
+
+    // calling add enemy 
+    addEnemy1(enemy1StartPosition)
+    addEnemy2(enemy2StartPosition)
+    addEnemy3(enemy3StartPosition)
+    addEnemy4(enemy4StartPosition)
 
     // calling each instance of addStar
     addStar1(starPosition1)
@@ -511,6 +536,41 @@ function init() {
   function addObstacle36(position) {
     cells[position].classList.add(obstacleClass36)
   }
+
+  // adding enemies to grid
+  function addEnemy1(position) {
+    cells[position].classList.add(enemyClass1)
+  }
+
+  function addEnemy2(position) {
+    cells[position].classList.add(enemyClass2)
+  }
+
+  function addEnemy3(position) {
+    cells[position].classList.add(enemyClass3)
+  }
+
+  function addEnemy4(position) {
+    cells[position].classList.add(enemyClass4)
+  }
+
+  // removing enemies from grid
+  function removeEnemy1(position) {
+    cells[position].classList.remove(enemyClass1)
+  }
+
+  function removeEnemy2(position) {
+    cells[position].classList.remove(enemyClass2)
+  }
+
+  function removeEnemy3(position) {
+    cells[position].classList.remove(enemyClass3)
+  }
+
+  function removeEnemy4(position) {
+    cells[position].classList.remove(enemyClass4)
+  }
+
 
   // removing obstacle from grid
   function removeObstacle(position) {
@@ -1127,7 +1187,66 @@ function init() {
     collision()
   }, 500)
 
-  
+  // enemy movement functions
+  const enemy1Movement = setInterval(() => {
+    removeEnemy1(enemy1CurrentPosition)
+
+    if (enemy1CurrentPosition % width === 0) {
+      enemy1CurrentPosition += 19
+    } else {
+      enemy1CurrentPosition--
+    }
+    addEnemy1(enemy1CurrentPosition)
+    collision()
+  }, 500)
+
+  const enemy2Movement = setInterval(() => {
+    removeEnemy2(enemy2CurrentPosition)
+
+    if (enemy2CurrentPosition % width === 0) {
+      enemy2CurrentPosition += 19
+    } else {
+      enemy2CurrentPosition--
+    }
+    addEnemy2(enemy2CurrentPosition)
+    collision()
+  }, 500)
+
+  const enemy3Movement = setInterval(() => {
+    removeEnemy3(enemy3CurrentPosition)
+
+    if (enemy3CurrentPosition % width === 0) {
+      enemy3CurrentPosition += 19
+    } else {
+      enemy3CurrentPosition--
+    }
+    addEnemy3(enemy3CurrentPosition)
+    collision()
+  }, 500)
+
+  const enemy4Movement = setInterval(() => {
+    removeEnemy4(enemy4CurrentPosition)
+
+    if (enemy4CurrentPosition % width === 0) {
+      enemy4CurrentPosition += 19
+    } else {
+      enemy4CurrentPosition--
+    }
+    addEnemy4(enemy4CurrentPosition)
+    collision()
+  }, 500)
+
+
+
+
+
+
+
+
+
+
+
+
 
   // laser shooting functions
   // let count = 0
@@ -1146,7 +1265,7 @@ function init() {
   //   if (count > 10) {
   //     clearInterval()
   //     removeLaser(laserCurrentPosition)
-    
+
   //   } else {
   //     shootAgain()
   //   }
@@ -1176,7 +1295,7 @@ function init() {
 
 
 
-  
+
 
 
 
@@ -1231,193 +1350,216 @@ function init() {
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle6CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle7CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle8CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle9CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle10CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle11CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle12CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle13CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle14CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle15CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle16CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle17CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle18CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle19CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle20CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle21CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle22CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle23CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle24CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle25CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle26CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle27CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle28CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle29CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle30CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle31CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle32CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle33CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle34CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle35CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
     } else if (playerCurrentPosition === obstacle36CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-    
+
+    } else if (playerCurrentPosition === enemy1CurrentPosition) {
+      crashSound()
+      removePlayer(playerCurrentPosition)
+      addPlayer(playerStartPosition)
+      playerCurrentPosition = playerStartPosition
+
+    } else if (playerCurrentPosition === enemy2CurrentPosition) {
+      crashSound()
+      removePlayer(playerCurrentPosition)
+      addPlayer(playerStartPosition)
+      playerCurrentPosition = playerStartPosition
+
+    } else if (playerCurrentPosition === enemy3CurrentPosition) {
+      crashSound()
+      removePlayer(playerCurrentPosition)
+      addPlayer(playerStartPosition)
+      playerCurrentPosition = playerStartPosition
+
+    } else if (playerCurrentPosition === enemy4CurrentPosition) {
+      crashSound()
+      removePlayer(playerCurrentPosition)
+      addPlayer(playerStartPosition)
+      playerCurrentPosition = playerStartPosition
     }
   }
 
@@ -1447,7 +1589,7 @@ function init() {
     audio.play()
   }
 
-  function collisionCrashSound() {
+  function crashSound() {
     audio.src = 'sounds/ENCRASH1.wav'
     audio.play()
   }
@@ -1472,7 +1614,7 @@ function init() {
   document.addEventListener('keydown', playerMovement)
 
   //must add each obstacle start position 
-  createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition, starPosition1, starPosition2, starPosition3, starPosition4, starPosition5, starPosition6, starPosition7, starPosition8, starPosition9, starPosition10, starPosition11, starPosition12, starPosition13, starPosition14, starPosition15, starPosition16, obstacle5StartPosition, obstacle6StartPosition, obstacle7StartPosition, obstacle8StartPosition, obstacle9StartPosition, obstacle10StartPosition, obstacle11StartPosition, obstacle12StartPosition, obstacle13StartPosition, obstacle14StartPosition, obstacle15StartPosition, obstacle16StartPosition, obstacle17StartPosition, obstacle18StartPosition, obstacle19StartPosition, obstacle20StartPosition, obstacle21StartPosition, obstacle22StartPosition, obstacle23StartPosition, obstacle24StartPosition, obstacle25StartPosition, obstacle26StartPosition, obstacle27StartPosition, obstacle28StartPosition, obstacle29StartPosition, obstacle30StartPosition, obstacle31StartPosition, obstacle32StartPosition, obstacle33StartPosition, obstacle34StartPosition, obstacle35StartPosition, obstacle36StartPosition)
+  createGrid(playerStartPosition, obstacleStartPosition, obstacle2StartPosition, obstacle3StartPosition, obstacle4StartPosition, starPosition1, starPosition2, starPosition3, starPosition4, starPosition5, starPosition6, starPosition7, starPosition8, starPosition9, starPosition10, starPosition11, starPosition12, starPosition13, starPosition14, starPosition15, starPosition16, obstacle5StartPosition, obstacle6StartPosition, obstacle7StartPosition, obstacle8StartPosition, obstacle9StartPosition, obstacle10StartPosition, obstacle11StartPosition, obstacle12StartPosition, obstacle13StartPosition, obstacle14StartPosition, obstacle15StartPosition, obstacle16StartPosition, obstacle17StartPosition, obstacle18StartPosition, obstacle19StartPosition, obstacle20StartPosition, obstacle21StartPosition, obstacle22StartPosition, obstacle23StartPosition, obstacle24StartPosition, obstacle25StartPosition, obstacle26StartPosition, obstacle27StartPosition, obstacle28StartPosition, obstacle29StartPosition, obstacle30StartPosition, obstacle31StartPosition, obstacle32StartPosition, obstacle33StartPosition, obstacle34StartPosition, obstacle35StartPosition, obstacle36StartPosition, enemy1StartPosition, enemy2StartPosition, enemy3StartPosition, enemy4StartPosition)
 }
 
 

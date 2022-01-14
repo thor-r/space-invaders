@@ -47,6 +47,8 @@ section {
   margin-bottom: 30px;
   border-radius: 20px;
   padding-top: 4px;
+  border: 3px solid gold;
+  background-color: black;
 }
 
 button img {
@@ -58,17 +60,27 @@ border: 3px solid gold;
   background: url('../assets/controlinfo.png');
   background-size: cover;
   width: 800px;
-  height: 50px;
+  height: 58px;
   border-radius: 10px;
-  padding-top: -5px;
+  margin-bottom: -5px;
+  border: 1px solid gold;
   
 }
 
 #score {
-  margin-left: 5px;
+  margin-right: 15px;
   margin-bottom: 10px;
   font-size: 15px;
   color: azure;
+  padding-left: 5px;
+  color: blue;
+  font-size: 15px;
+}
+
+#lives {
+  padding-left: 5px;
+  padding-right: 20px;
+  color: red;
 }
 
 span {
@@ -83,13 +95,20 @@ color: azure;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  border: 3px solid white;
-  background-color: green;
+  /* border: 3px solid darkorange; */
+  /* background-color: green; */
+  background: url('../assets/Movies-Star-Wars-Pictures 3.jpeg');
   flex-direction: column;  
   /* margin-left: 50px;  this centers the grid on page */
-  padding-left: 30px;
-  padding-right: 30px;
+  /* padding-left: 30px;
+  padding-right: 30px; */
+  padding-left: 10px;
+  padding-right: 10px;
   border-radius: 5px;
+  margin-right: 115px;
+  margin-top: 11px;
+  box-shadow: inset 0 0 0 4px #F9D051;
+  /* border: linear-gradient(to right, #00D09A 0%, #00D09A 33%, #00D09A 50%, #feb123 66%, #ff581e 66%, #ff581e 100%); */
 }
 
 .grid {
@@ -101,8 +120,8 @@ color: azure;
   height: 800px;
   width: 700px;
   border: 2px solid black;
-  background-color: black;
-  /* background: url('../assets/darkersapce.gif'); */
+  /* background-color: black; */
+  background: url('../assets/darkersapce.gif');
   border-radius: 5px;
   
 }
@@ -374,28 +393,6 @@ color: azure;
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* death star */
 .grid div.star1 {
   background: url('../deathstar/image_part_001 (1).png');
@@ -525,4 +522,32 @@ color: azure;
 
 .grid div.laser {
   background-color: red;
+}
+
+.grid div.enemyShip1 {
+  background: url('../assets/vadersship copy.png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.enemyShip2 {
+  background: url('../assets/fighterabove.png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.enemyShip3 {
+  background: url('../assets/fighterabove.png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.enemyShip4 {
+  background: url('../assets/fighterabove.png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
 }
