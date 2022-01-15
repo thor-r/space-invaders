@@ -1303,38 +1303,44 @@ function init() {
 
 
 
-
-
-
-
-
-
+  // points added for a win
+  let points = 1
+  
   // win function --> call function within player movement??
   function winLogic() {
     if (playerCurrentPosition === starPosition1 || playerCurrentPosition === starPosition4 || playerCurrentPosition === starPosition8 || playerCurrentPosition === starPosition12 || playerCurrentPosition === starPosition13 || playerCurrentPosition === starPosition14 || playerCurrentPosition === starPosition15 || playerCurrentPosition === starPosition16) {
       removePlayer(playerCurrentPosition)
-      // window.alert('you won')
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
       YodaLaugh()
+      score.innerHTML = points++
+      // window.alert('you won')
     }
   }
 
+  // function youLost() {
+  //   removePlayer(playerCurrentPosition)
+  //   window.alert('you lost')
+  //   addPlayer(playerStartPosition)
+  //   playerCurrentPosition = playerStartPosition
+  //   lives.innerHTML = 3
+  //   score.innerHTML = 0
+  //   jabbaLaugh()
+  // }
+
   function youLost() {
-    removePlayer(playerCurrentPosition)
-    // window.alert('you lost')
-    addPlayer(playerStartPosition)
-    playerCurrentPosition = playerStartPosition
+    window.alert('you lost')
     lives.innerHTML = 3
     score.innerHTML = 0
     jabbaLaugh()
   }
 
-  // let pointGained = 10
-  // const newPoint = 10
+  
 
-  let points = + 10
-  const lifeLost = -1
+  
+  
+  // lives lost on each collision
+  let lifeLost = -1
 
 
   //  collision function call collision function within player move and every instance of obstacle move / update collision for every new obstacle
@@ -1344,59 +1350,49 @@ function init() {
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-      // score.innerHTML = points
-      // points = score.innerHTML + points
-      // lives.innerHTML = lifeLost
-
+      lives.innerHTML--
+    
     } else if (playerCurrentPosition === obstacle2CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-      // score.innerHTML = points
-      // points = score.innerHTML + points
-      // lives.innerHTML = lifeLost
-
+      lives.innerHTML--
+      
     } else if (playerCurrentPosition === obstacle3CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-      // score.innerHTML = points
-      // points = score.innerHTML + points
-      // lives.innerHTML = lifeLost
-
+      lives.innerHTML--
+      
     } else if (playerCurrentPosition === obstacle4CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
-      // score.innerHTML = points
-      // points = score.innerHTML + points
-      // lives.innerHTML = lifeLost
-
+      playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
+      
     } else if (playerCurrentPosition === obstacle5CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-      // score.innerHTML = points
-      // points = score.innerHTML + points
-      // lives.innerHTML = lifeLost
-
+      lives.innerHTML--
+      
     } else if (playerCurrentPosition === obstacle6CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-      // score.innerHTML = points
-      // points = score.innerHTML + points
-      // lives.innerHTML = lifeLost
+      lives.innerHTML--
       
     } else if (playerCurrentPosition === obstacle7CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      score.innerHTML--
 
     } else if (playerCurrentPosition === obstacle8CurrentPosition) {
       collisionSoundChewy()
@@ -1596,7 +1592,7 @@ function init() {
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
     
-    } if (lives.innerHTML === 0) {
+    } else if (lives.innerHTML === 0) {
       youLost()
     }
   }
