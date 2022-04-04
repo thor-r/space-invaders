@@ -748,6 +748,7 @@ function init() {
     addPlayer(playerCurrentPosition)
     collision()
     winLogic()
+    youLost()
   }
 
 
@@ -1241,15 +1242,6 @@ function init() {
 
 
 
-
-
-
-
-
-
-
-
-
   // laser shooting functions
   // let count = 0
 
@@ -1286,23 +1278,6 @@ function init() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   // points added for a win
   let points = 1
   
@@ -1312,35 +1287,25 @@ function init() {
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-      YodaLaugh()
+      yodaLaugh()
       score.innerHTML = points++
-      // window.alert('you won')
+    } if (score.innerHTML === '3') {
+      window.alert('Victory!')
+      score.innerHTML = '0'
     }
   }
 
-  // function youLost() {
-  //   removePlayer(playerCurrentPosition)
-  //   window.alert('you lost')
-  //   addPlayer(playerStartPosition)
-  //   playerCurrentPosition = playerStartPosition
-  //   lives.innerHTML = 3
-  //   score.innerHTML = 0
-  //   jabbaLaugh()
-  // }
-
+  
   function youLost() {
-    window.alert('you lost')
-    lives.innerHTML = 3
-    score.innerHTML = 0
-    jabbaLaugh()
+    if (lives.innerHTML === '0') {
+      window.alert('Defeat!')
+      jabbaLaugh()
+      lives.innerHTML = '0'
+      score.innerHTML = '0'
+      playerCurrentPosition = playerStartPosition
+      lives.innerHTML = '3'
+    }
   }
-
-  
-
-  
-  
-  // lives lost on each collision
-  let lifeLost = -1
 
 
   //  collision function call collision function within player move and every instance of obstacle move / update collision for every new obstacle
@@ -1392,209 +1357,241 @@ function init() {
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
-      score.innerHTML--
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle8CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle9CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle10CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle11CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle12CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle13CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle14CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle15CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle16CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle17CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle18CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle19CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle20CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle21CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle22CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle23CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle24CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle25CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle26CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle27CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle28CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle29CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle30CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle31CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle32CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle33CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle34CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle35CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === obstacle36CurrentPosition) {
       collisionSoundChewy()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === enemy1CurrentPosition) {
       crashSound()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === enemy2CurrentPosition) {
       crashSound()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === enemy3CurrentPosition) {
       crashSound()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
 
     } else if (playerCurrentPosition === enemy4CurrentPosition) {
       crashSound()
       removePlayer(playerCurrentPosition)
       addPlayer(playerStartPosition)
       playerCurrentPosition = playerStartPosition
+      lives.innerHTML--
     
-    } else if (lives.innerHTML === 0) {
-      youLost()
-    }
+    } 
+    youLost()
   }
 
 
@@ -1629,7 +1626,7 @@ function init() {
   }
 
   // win sounds 
-  function YodaLaugh() {
+  function yodaLaugh() {
     audio.src = 'sounds/YODA3.wav'
     audio.play()
   }
