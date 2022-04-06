@@ -31,7 +31,7 @@ The assignment was to create a browser-based version of a classic arcade game us
 * GitHub
 
 ### Star Frogger 
-The player moves in 2D dimensions navigating their way to the top of the gameplay arena. On their way the player must navigate several obstacles to avoid collision on their way to the Death Star.
+The player moves in 2D dimensions navigating their way to the top of the gameplay arena. On their way the player must navigate several obstacles to avoid collision on their way to the Death Star!
 
 ![star-frogger](https://user-images.githubusercontent.com/87788714/161652631-b5aa7b28-13b9-4cd9-bdfe-81d94b9d88d8.gif)
 
