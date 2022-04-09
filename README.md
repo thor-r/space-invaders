@@ -100,6 +100,8 @@ The Endgame was one of the last features I added. This required ‘win logic’ 
 <img width="1481" alt="Screen Shot 2022-03-18 at 11 25 37 PM" src="https://user-images.githubusercontent.com/87788714/161650537-aef896f3-9cd6-45bc-803f-d6d3e6e0b19a.png">
 
 To handle the loss logic I used an ‘if’ statement where if the players lives equalled ‘0’ a window prompt would appear stating ‘Defeat!’, the player would be reset to the starting position and the lives counter would be reset back to 3. 
+
+
 <img width="705" alt="Screen Shot 2022-03-19 at 1 50 08 PM" src="https://user-images.githubusercontent.com/87788714/161650557-2eb4aace-46e9-433b-99e0-5205551b8585.png">
 
 At this point in the project I found that CSS was taking the majority of the remaining time so the last piece of functionality I decided to implement was sounds that would trigger with different in-game events. I added different sounds for changes in the players ship direction, unique sounds upon collision with asteroids vs enemy ships and win/loss sounds. 
